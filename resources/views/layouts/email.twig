@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        {% include 'layouts/includes/email-style.twig' ignore missing %}
+        <title></title>
+    </head>
+    <body class="">
+        <span class="preheader">This is preheader text. Some clients will show this text as a preview.</span>
+        <table role="presentation" class="body">
+            <tr>
+                <td class="container">
+                    <div class="content">
+                        <!-- START CENTERED WHITE CONTAINER -->
+                        <table role="presentation" class="main">
+                            <!-- START MAIN CONTENT AREA -->
+                            <tr>
+                                <td class="wrapper">
+                                    <table role="presentation">
+                                        <tr>
+                                            <td>
+                                                {% block content %}{% endblock %}
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <!-- END MAIN CONTENT AREA -->
+                        </table>
+                        <!-- END CENTERED WHITE CONTAINER -->
+                        <!-- START FOOTER -->
+                        {% include 'layouts/includes/email-footer.twig' ignore missing %}
+                        <!-- END FOOTER -->
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

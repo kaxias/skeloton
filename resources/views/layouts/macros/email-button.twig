@@ -1,0 +1,19 @@
+{% macro button(name, link) %}
+    <table role="presentation" class="btn btn-primary">
+        <tbody>
+        <tr>
+            <td align="left">
+                <table role="presentation">
+                    <tbody>
+                    <tr>
+                        <td>
+                            <a href="{{ link }}" target="_blank">{{ name }}</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+{% endmacro %}

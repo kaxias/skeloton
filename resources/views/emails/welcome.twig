@@ -1,0 +1,10 @@
+{% extends "layouts/email.twig" %}
+{% from 'layouts/macros/email-button.twig' import button %}
+
+{% block content %}
+    <p>Hi there, {{ user.username }}.</p>
+    <p>{{ bodyMessage }}</p>
+    <p>Pleases verify your email in 2 hours or token will expired.</p>
+    {{ button('Verifier Yuor Email', full_url_for('auth-email_verify', {token:token})) }}
+    <p>Token well expired after 2 hours.</p>
+{% endblock %}

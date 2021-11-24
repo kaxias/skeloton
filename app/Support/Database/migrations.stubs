@@ -1,0 +1,17 @@
+<?php
+
+use $useClassName;
+use Illuminate\Database\Schema\Blueprint;
+
+final class $className extends $baseClassName
+{
+    public function up(): void
+    {
+        $this->schema->create('table-name', function (Blueprint $table) {});
+    }
+
+    public function down(): void
+    {
+        $this->schema->dropIfExists('table-name');
+    }
+}
